@@ -5,7 +5,7 @@ date: "2023-01-18"
 output: html_document
 ---
 
-Benford’s Law, or the first-digit law, refers to the fact that many sets of real-life numerical data probabilistically conform to certain patterns. Essentially, it observes that the leading digit of entries is disproportionately likely to be small, with 1 appearing as the first digit roughly 30% of the time. This law applies over a wide variety of data sets, including building heights, street addresses, prices, and population numbers. It has been used to identify fraud, as artificially created data - say, for fake customer lists, or for falsifying elections - will often not conform to Benford’s Law. 
+Benford’s Law, or the first-digit law, refers to the fact that many sets of real-life numerical data conform to certain patterns. Essentially, it observes that the leading digit of a number is disproportionately likely to be small, with 1 appearing as the first digit roughly 30% of the time. This law applies over a wide variety of data sets, including building heights, street addresses, prices, and population numbers. It has been used to identify fraud, as artificially created data - say, for fake customer lists, or for falsifying elections - will often not conform to Benford’s Law. 
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
@@ -16,7 +16,7 @@ knitr::opts_chunk$set(echo = TRUE)
 ben=read.csv("benfords.csv")
 ```
 
-
+Early draft versions of plot (final at bottom):
 ```{r}
 library(ggplot2)
 base= ggplot(data = ben,
@@ -85,6 +85,10 @@ plot7 = plot6 + theme(
 
 plot7
 ```
+
+Final version, centered with Husky colors:)
+
+
 ```{r}
 plot8 = plot7 + theme(plot.caption = element_text(hjust = 0),
                       plot.title = element_text(hjust = 0.5),
